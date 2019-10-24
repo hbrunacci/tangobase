@@ -26,7 +26,7 @@ SECRET_KEY = 'fad0zvz($r29963g!oev$@pnzwcvlr(7r=ebylpl61hnp97ade'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['tangobase.pythonanywhere.com']
+ALLOWED_HOSTS = ['tangobase.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition

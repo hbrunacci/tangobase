@@ -44,6 +44,7 @@ seguimiento_crud = seguimientoCRUD()
 
 
 urlpatterns = [
+    path('', IndexView.as_view()),
     path('admin/', admin.site.urls),
     path('', include('estadisticas.urls')),
     path('', include(transfusiones_crud.get_urls())),

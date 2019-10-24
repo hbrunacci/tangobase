@@ -10,6 +10,9 @@ from cruds_adminlte.filter import FormFilter
 from django.views.generic.base import TemplateView
 from django import forms
 
+class IndexView(TemplateView):
+    template_name = 'index.html'
+
 class transfusionesCRUD(CRUDView):
     model = Transfusiones
     views_avaible = ['create', 'list', 'delete', 'update', 'detail']
