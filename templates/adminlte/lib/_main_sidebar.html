@@ -1,0 +1,108 @@
+{% load i18n %}
+
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        {% block nav_links_ul %}
+        <ul class="sidebar-menu">
+            {% block nav_links_outer %}
+            <li class="header">{% block nav_heading %}MAIN NAVIGATION{% endblock %}</li>
+            {% block nav_links %}
+            <li>
+                <a href="{% url 'estadisticas_clinica_list' %}">
+                    <i class="fa fa-users"></i> <span>clinica </span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'estadisticas_procedimiento_list' %}">
+                    <i class="fa fa-users"></i> <span>procedimiento </span>
+            </a>
+                </li>
+                <li>
+<a href="{% url 'estadisticas_opciones_viabilidad_list' %}">
+                <i class="fa fa-users"></i> <span>opciones_viabilidad </span>
+</a>
+                </li>
+                <li>
+<a href="{% url 'estadisticas_opciones_metodo_list' %}">
+                <i class="fa fa-users"></i> <span>opciones_metodo </span>
+</a>
+                </li>
+                <li>
+<a href="{% url 'estadisticas_resultados_seguimiento_list' %}">
+                <i class="fa fa-users"></i> <span>resultados_seguimiento </span>
+</a>
+                </li>
+                <li>
+<a href="{% url 'estadisticas_estudio_list' %}">
+                <i class="fa fa-users"></i> <span>estudio </span>
+</a>
+                </li>
+                <li>
+<a href="{% url 'estadisticas_cirujanos_list' %}">
+                <i class="fa fa-users"></i> <span>cirujanos </span>
+</a>
+                </li>
+                <li>
+<a href="{% url 'estadisticas_ayudantes_list' %}">
+                <i class="fa fa-users"></i> <span>ayudantes </span>
+</a>
+                </li>
+                <li>
+<a href="{% url 'estadisticas_evento_list' %}">
+                <i class="fa fa-users"></i> <span>evento </span>
+</a>
+                </li>
+                <li>
+<a href="{% url 'estadisticas_antecedentes_list' %}">
+                <i class="fa fa-users"></i> <span>antecedentes </span>
+</a>
+                </li>
+                <li>
+<a href="{% url 'estadisticas_cirugia_list' %}">
+                <i class="fa fa-users"></i> <span>cirugia </span>
+</a>
+                </li>
+                <li>
+<a href="{% url 'estadisticas_complicaciones_list' %}">
+                <i class="fa fa-users"></i> <span>complicaciones </span>
+</a>
+                </li>
+                <li>
+<a href="{% url 'estadisticas_ecodoppler_list' %}">
+                <i class="fa fa-users"></i> <span>ecodoppler </span>
+</a>
+                </li>
+                <li>
+<a href="{% url 'estadisticas_viablilidad_list' %}">
+                <i class="fa fa-users"></i> <span>viablilidad </span>
+</a>
+                </li>
+                <li>
+<a href="{% url 'estadisticas_laboratorio_list' %}">
+                <i class="fa fa-users"></i> <span>laboratorio </span>
+</a>
+                </li>
+                <li>
+<a href="{% url 'estadisticas_paciente_list' %}">
+                <i class="fa fa-users"></i> <span>paciente </span>
+</a>
+                </li>
+                <li>
+<a href="{% url 'estadisticas_alta_list'' %">
+<i class="fa fa-users"></a> <span>alta </span>
+                </
+                </li>
+                <li>alta
+<a href="{% url 'estadisticas_seguimiento_list' %}">
+                <i class="fa fa-users"></i> <span>seguimiento </span>
+</a>
+                </li>
+                <li>
+            {% endblock nav_links %}
+            {% endblock nav_links_outer %}
+        </ul>
+        {% endblock nav_links_ul %}
+    </section>
+    <!-- /.sidebar -->
+</aside>

@@ -15,8 +15,56 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from estadisticas.views import *
+
+transfusiones_crud = transfusionesCRUD()
+ecp_crud = ecpCRUD()
+medicacion_habitual_crud = medicacion_habitualCRUD()
+clinica_crud = clinicaCRUD()
+procedimiento_crud = procedimientoCRUD()
+opciones_viabilidad_crud = opciones_viabilidadCRUD()
+opciones_metodo_crud = opciones_metodoCRUD()
+resultados_seguimiento_crud = resultados_seguimientoCRUD()
+estudio_crud = estudioCRUD()
+cirujanos_crud = cirujanosCRUD()
+ayudantes_crud = ayudantesCRUD()
+evento_crud = eventoCRUD()
+antecedentes_crud = antecedentesCRUD()
+cirugia_crud = cirugiaCRUD()
+complicaciones_crud = complicacionesCRUD()
+ecodoppler_crud = ecodopplerCRUD()
+viablilidad_crud = viablilidadCRUD()
+laboratorio_crud = laboratorioCRUD()
+paciente_crud = pacienteCRUD()
+alta_crud = altaCRUD()
+seguimiento_crud = seguimientoCRUD()
+
+
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('estadisticas.urls')),
+    path('', include(transfusiones_crud.get_urls())),
+    path('', include(ecp_crud.get_urls())),
+    path('', include(medicacion_habitual_crud.get_urls())),
+    path('', include(clinica_crud.get_urls())),
+    path('', include(procedimiento_crud.get_urls())),
+    path('', include(opciones_viabilidad_crud.get_urls())),
+    path('', include(opciones_metodo_crud.get_urls())),
+    path('', include(resultados_seguimiento_crud.get_urls())),
+    path('', include(estudio_crud.get_urls())),
+    path('', include(cirujanos_crud.get_urls())),
+    path('', include(ayudantes_crud.get_urls())),
+    path('', include(evento_crud.get_urls())),
+    path('', include(antecedentes_crud.get_urls())),
+    path('', include(cirugia_crud.get_urls())),
+    path('', include(complicaciones_crud.get_urls())),
+    path('', include(ecodoppler_crud.get_urls())),
+    path('', include(viablilidad_crud.get_urls())),
+    path('', include(laboratorio_crud.get_urls())),
+    path('', include(alta_crud.get_urls())),
+    path('', include(seguimiento_crud.get_urls())),
+    path('', include(paciente_crud.get_urls())),
 ]
