@@ -2,25 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef603cc5-c921-4061-b3d6-19cee48aa562" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/estadisticas/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/estadisticas/migrations/0002_auto_20190205_1303.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/estadisticas/migrations/0003_auto_20190205_1353.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/estadisticas/migrations/0004_auto_20190205_1520.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/estadisticas/migrations/0005_auto_20190205_1925.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/estadisticas/migrations/0006_auto_20190205_2042.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/estadisticas/migrations/0007_auto_20190205_2043.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/estadisticas/migrations/0008_auto_20190206_1211.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/estadisticas/migrations/0009_auto_20191024_1404.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/adminlte/login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/registration/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/estadisticas/admin.py" afterPath="$PROJECT_DIR$/estadisticas/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/estadisticas/forms.py" afterPath="$PROJECT_DIR$/estadisticas/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/estadisticas/models.py" afterPath="$PROJECT_DIR$/estadisticas/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/estadisticas/views.py" afterPath="$PROJECT_DIR$/estadisticas/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tango/urls.py" afterPath="$PROJECT_DIR$/tango/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/adminlte/lib/_main_sidebar.html" afterPath="$PROJECT_DIR$/templates/adminlte/lib/_main_sidebar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/estadisticas/estadisticas_base.html" afterPath="$PROJECT_DIR$/templates/estadisticas/estadisticas_base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,8 +20,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/estadisticas/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="1120" column="53" lean-forward="true" selection-start-line="1120" selection-start-column="53" selection-end-line="1120" selection-end-column="53" />
+            <state relative-caret-position="390">
+              <caret line="1177" column="8" lean-forward="true" selection-start-line="1177" selection-start-column="6" selection-end-line="1177" selection-end-column="17" />
               <folding>
                 <element signature="e#68#94#0" expanded="false" />
                 <element signature="e#2060#2361#0" expanded="false" />
@@ -82,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/estadisticas/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-63">
-              <caret line="67" column="19" lean-forward="false" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
+            <state relative-caret-position="417">
+              <caret line="68" column="36" lean-forward="false" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -107,11 +93,29 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tango/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-              <folding>
-                <element signature="e#629#661#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="16" column="46" lean-forward="false" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/registration/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/adminlte/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="95" lean-forward="false" selection-start-line="11" selection-start-column="95" selection-end-line="11" selection-end-column="95" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -131,26 +135,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
               <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/cruds/create.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tango/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="49" lean-forward="false" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -222,11 +206,12 @@
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/estadisticas/admin.py" />
         <option value="$PROJECT_DIR$/estadisticas/forms.py" />
-        <option value="$PROJECT_DIR$/tango/urls.py" />
-        <option value="$PROJECT_DIR$/estadisticas/views.py" />
         <option value="$PROJECT_DIR$/estadisticas/models.py" />
         <option value="$PROJECT_DIR$/templates/estadisticas/estadisticas_base.html" />
         <option value="$PROJECT_DIR$/templates/adminlte/lib/_main_sidebar.html" />
+        <option value="$PROJECT_DIR$/estadisticas/views.py" />
+        <option value="$PROJECT_DIR$/tango/urls.py" />
+        <option value="$PROJECT_DIR$/templates/adminlte/login.html" />
       </list>
     </option>
   </component>
@@ -237,9 +222,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="21" />
-    <option name="width" value="1344" />
-    <option name="height" value="742" />
+    <option name="x" value="-1" />
+    <option name="width" value="1368" />
+    <option name="height" value="372" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -306,6 +291,12 @@
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="estadisticas" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="tango" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tango" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="registration" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -319,14 +310,15 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/templates/adminlte" />
+      <recent name="$PROJECT_DIR$/estadisticas/templates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/estadisticas/templates/estadisticas" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates" />
-      <recent name="$PROJECT_DIR$/estadisticas/templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -400,7 +392,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09934854" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3843648" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -452,21 +444,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/estadisticas/migrations/0008_auto_20190206_1211.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/estadisticas/eventos.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/estadisticas/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16740">
@@ -917,48 +894,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tango/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <element signature="e#629#661#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/estadisticas/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="112" column="0" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/estadisticas/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="1120" column="53" lean-forward="true" selection-start-line="1120" selection-start-column="53" selection-end-line="1120" selection-end-column="53" />
-          <folding>
-            <element signature="e#68#94#0" expanded="false" />
-            <element signature="e#2060#2361#0" expanded="false" />
-            <element signature="e#2486#2696#0" expanded="false" />
-            <element signature="e#2826#2963#0" expanded="false" />
-            <element signature="e#6153#6337#0" expanded="false" />
-            <element signature="e#9729#9730#0" expanded="false" />
-            <element signature="e#9952#10140#0" expanded="false" />
-            <element signature="e#10164#10182#0" expanded="false" />
-            <element signature="e#10407#10617#0" expanded="false" />
-            <element signature="e#10640#10641#0" expanded="false" />
-            <element signature="e#10964#11207#0" expanded="false" />
-            <element signature="e#11214#11215#0" expanded="false" />
-            <element signature="e#11489#11885#0" expanded="false" />
-            <element signature="e#14049#14056#0" expanded="false" />
-            <element signature="e#14467#14491#0" expanded="false" />
-            <element signature="e#16467#16484#0" expanded="false" />
-            <element signature="e#16823#16838#0" expanded="false" />
-            <element signature="e#18340#18427#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -986,13 +926,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/estadisticas/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="1177" column="8" lean-forward="true" selection-start-line="1177" selection-start-column="6" selection-end-line="1177" selection-end-column="17" />
+          <folding>
+            <element signature="e#68#94#0" expanded="false" />
+            <element signature="e#2060#2361#0" expanded="false" />
+            <element signature="e#2486#2696#0" expanded="false" />
+            <element signature="e#2826#2963#0" expanded="false" />
+            <element signature="e#6153#6337#0" expanded="false" />
+            <element signature="e#9729#9730#0" expanded="false" />
+            <element signature="e#9952#10140#0" expanded="false" />
+            <element signature="e#10164#10182#0" expanded="false" />
+            <element signature="e#10407#10617#0" expanded="false" />
+            <element signature="e#10640#10641#0" expanded="false" />
+            <element signature="e#10964#11207#0" expanded="false" />
+            <element signature="e#11214#11215#0" expanded="false" />
+            <element signature="e#11489#11885#0" expanded="false" />
+            <element signature="e#14049#14056#0" expanded="false" />
+            <element signature="e#14467#14491#0" expanded="false" />
+            <element signature="e#16467#16484#0" expanded="false" />
+            <element signature="e#16823#16838#0" expanded="false" />
+            <element signature="e#18340#18427#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/estadisticas/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-63">
-          <caret line="67" column="19" lean-forward="false" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
+        <state relative-caret-position="417">
+          <caret line="68" column="36" lean-forward="false" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tango/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="46" lean-forward="false" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registration/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/adminlte/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="95" lean-forward="false" selection-start-line="11" selection-start-column="95" selection-end-line="11" selection-end-column="95" />
+          <folding />
         </state>
       </provider>
     </entry>

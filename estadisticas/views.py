@@ -10,6 +10,69 @@ from cruds_adminlte.filter import FormFilter
 from django.views.generic.base import TemplateView
 from django import forms
 
+
+class Antecedentes_AjaxCRUD(InlineAjaxCRUD):
+    model = Antecedentes
+    base_model = Cirugia
+    inline_field = 'cirugia'
+    title = _('Antecedentes')
+
+class Datos_En_Cirugia_AjaxCRUD(InlineAjaxCRUD):
+    model = Datos_En_Cirugia
+    base_model = Cirugia
+    inline_field = 'cirugia'
+    title = _('Datos de la Cirugia')
+
+class Complicaciones_AjaxCRUD(InlineAjaxCRUD):
+    model =  Complicaciones
+    base_model = Cirugia
+    inline_field = 'cirugia'
+    title = _('Complicaciones')
+
+class Ecodoppler_AjaxCRUD(InlineAjaxCRUD):
+    model = Ecodoppler
+    base_model = Cirugia
+    inline_field = 'cirugia'
+    title = _('Ecodoppler')
+
+class Viablilidad_AjaxCRUD(InlineAjaxCRUD):
+    model = Viablilidad
+    base_model = Cirugia
+    inline_field = 'cirugia'
+    title = _('Viablilidad')
+
+class Laboratorio_AjaxCRUD(InlineAjaxCRUD):
+    model = Laboratorio
+    base_model = Cirugia
+    inline_field = 'cirugia'
+    title = _('Laboratorio')
+
+class Alta_AjaxCRUD(InlineAjaxCRUD):
+    model = Alta
+    base_model = Cirugia
+    inline_field = 'cirugia'
+    title = _('Alta')
+
+class Seguimiento_AjaxCRUD(InlineAjaxCRUD):
+    model = Seguimiento
+    base_model = Cirugia
+    inline_field = 'cirugia'
+    title = _('Segumiento')
+
+class cirugiaCRUD(CRUDView):
+    model = Cirugia
+    inlines = [Viablilidad_AjaxCRUD,
+               Antecedentes_AjaxCRUD,
+               Datos_En_Cirugia_AjaxCRUD,
+               Complicaciones_AjaxCRUD,
+               Ecodoppler_AjaxCRUD,
+               Laboratorio_AjaxCRUD,
+               Alta_AjaxCRUD,
+               Seguimiento_AjaxCRUD,
+               ]
+    views_avaible = ['create', 'list', 'delete', 'update', 'detail']
+
+
 class IndexView(TemplateView):
     template_name = 'index.html'
 
@@ -57,10 +120,7 @@ class ayudantesCRUD(CRUDView):
     model = Ayudantes
     views_avaible = ['create', 'list', 'delete', 'update', 'detail']
     
-class cirugiaCRUD(CRUDView):
-    model = Cirugia
-    views_avaible = ['create', 'list', 'delete', 'update', 'detail']
-    
+
 class antecedentesCRUD(CRUDView):
     model = Antecedentes
     views_avaible = ['create', 'list', 'delete', 'update', 'detail']
