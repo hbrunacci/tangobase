@@ -57,16 +57,16 @@ class ayudantesCRUD(CRUDView):
     model = Ayudantes
     views_avaible = ['create', 'list', 'delete', 'update', 'detail']
     
-class eventoCRUD(CRUDView):
-    model = Evento
+class cirugiaCRUD(CRUDView):
+    model = Cirugia
     views_avaible = ['create', 'list', 'delete', 'update', 'detail']
     
 class antecedentesCRUD(CRUDView):
     model = Antecedentes
     views_avaible = ['create', 'list', 'delete', 'update', 'detail']
     
-class cirugiaCRUD(CRUDView):
-    model = Cirugia
+class datos_cirugiaCRUD(CRUDView):
+    model = Datos_En_Cirugia
     views_avaible = ['create', 'list', 'delete', 'update', 'detail']
     
 class complicacionesCRUD(CRUDView):

@@ -1006,7 +1006,28 @@ class Ayudantes(BaseTable):
         verbose_name_plural = 'Ayudantes'
 
 
+class Cirugia(BaseTable):
+    paciente = models.ForeignKey(Paciente, on_delete=models.CASCADE)
+    lugar = models.ForeignKey(Clinica, on_delete=models.CASCADE)
+    fecha = models.DateTimeField()
+    prioridad = models.CharField(max_length=50)
+    incidencia = models.CharField(max_length=35, verbose_name='Incidencia Cirugia', choices=incidencias,
+                                  default='Primera')
+    procedimientos = models.ManyToManyField(Procedimiento)
+    tipo_cirugia = models.CharField(max_length=100)
+    peso_cirugia = models.CharField(max_length=35, choices=peso_cirugia, default=crm)
+    abordaje = models.CharField(max_length=35, choices=abordaje)
+    descripcion = models.CharField(max_length=150)
+    cirujano = models.OneToOneField(Cirujanos, on_delete=models.CASCADE)
+    ayudante = models.OneToOneField(Ayudantes, on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name = 'Cirugia'
+        verbose_name_plural = 'Cirugias'
+
+
 class Antecedentes(BaseTable):
+    cirugia = models.ForeignKey(Cirugia,on_delete=models.CASCADE,related_name='antecedentes')
     peso = models.FloatField()
     etnia = models.CharField(max_length=15, choices=etnias, default=hisp)
     dislipemia = models.CharField(max_length=15, choices=si_no,default=no)
@@ -1037,7 +1058,8 @@ class Antecedentes(BaseTable):
         verbose_name_plural = 'Antecedentes'
 
 
-class Cirugia(BaseTable):
+class Datos_En_Cirugia(BaseTable):
+    cirugia = models.ForeignKey(Cirugia,on_delete=models.CASCADE,related_name='datos_en_cirugia')
     sts = models.FloatField(max_length=4)
     euroII = models.FloatField(max_length=4)
     syntax = models.FloatField(max_length=4)
@@ -1066,14 +1088,13 @@ class Cirugia(BaseTable):
     conductos = models.CharField(max_length=50, choices=conductos)
     extubado_enquirofano = models.CharField(choices=si_no, max_length=3)
     hemoderivados_intra = models.CharField(choices=si_no, max_length=3)
-    #complicaciones = models.ForeignKey(Complicaciones, on_delete=models.CASCADE)
 
 
 class Complicaciones(BaseTable):
-    cirujia = models.ForeignKey(Cirugia ,on_delete=models.CASCADE)
+    cirugia = models.ForeignKey(Cirugia,on_delete=models.CASCADE, related_name='complicaciones')
     arritmia = models.CharField(max_length=25, choices=arritmia, default=no)
     sangrado_medico = models.CharField(max_length=3, choices=si_no, default=no)
-    transfusiones = models.ForeignKey(Transfusiones, on_delete=models.CASCADE, default=no)
+    transfusiones = models.ForeignKey(Transfusiones, on_delete=models.CASCADE)
     reop_internado = models.CharField(max_length=35, choices=reoperacion_internado, default=no)
     renal = models.CharField(max_length=35, choices=renales, default=no)
     infectologicas = models.CharField(max_length=35, choices=infectologia, default=no)
@@ -1091,6 +1112,7 @@ class Complicaciones(BaseTable):
 
 
 class Ecodoppler(BaseTable):
+    cirugia = models.ForeignKey(Cirugia,on_delete=models.CASCADE,related_name='ecodoppler')
     diam_diastolico = models.IntegerField(verbose_name='Diametro Diast.')
     diam_sistolico = models.IntegerField(verbose_name='Diametro Sisto,')
     septum_iv = models.IntegerField(verbose_name='Septum IV')
@@ -1120,12 +1142,14 @@ class Ecodoppler(BaseTable):
 
 
 class Viablilidad(BaseTable):
+    cirugia = models.ForeignKey(Cirugia,on_delete=models.CASCADE,related_name='viabilidad')
     isquemia = models.ManyToManyField(Opciones_viabilidad, related_name='Isquemia')
     necrosis = models.ManyToManyField(Opciones_viabilidad, related_name='Necrosis')
     metodo_viabilidad = models.ManyToManyField(Opciones_metodo)
 
 
 class Laboratorio(BaseTable):
+    cirugia = models.ForeignKey(Cirugia,on_delete=models.CASCADE,related_name='laboratorio')
     fecha = models.DateTimeField(default=datetime.now())
     hto = models.IntegerField()
     hb = models.DecimalField(max_digits=5, decimal_places=2)
@@ -1141,6 +1165,7 @@ class Laboratorio(BaseTable):
 
 
 class Alta(BaseTable):
+    cirugia = models.ForeignKey(Cirugia,on_delete=models.CASCADE,related_name='alta')
     fecha = models.DateTimeField(default=datetime.now())
     hto = models.IntegerField()
     hb = models.DecimalField(max_digits=5, decimal_places=2)
@@ -1151,6 +1176,7 @@ class Alta(BaseTable):
 
 
 class Seguimiento(BaseTable):
+    cirugia = models.ForeignKey(Cirugia,on_delete=models.CASCADE,related_name='seguimiento')
     fecha = models.DateTimeField(default=datetime.now())
     vivo = models.CharField(choices=si_no, max_length=3)
     clase_funcional = models.CharField(choices=clase_funcional, max_length=30)
@@ -1166,29 +1192,3 @@ class Seguimiento(BaseTable):
     comentario = models.CharField(max_length=250)
 
 
-
-class Evento(BaseTable):
-    paciente = models.ForeignKey(Paciente, on_delete=models.CASCADE)
-    lugar = models.ForeignKey(Clinica, on_delete=models.CASCADE)
-    fecha = models.DateTimeField()
-    prioridad = models.CharField(max_length=50)
-    incidencia = models.CharField(max_length=35, verbose_name='Incidencia Cirugia', choices=incidencias, default='Primera')
-    procedimientos = models.ManyToManyField(Procedimiento)
-    tipo_cirugia = models.CharField(max_length=100)
-    peso_cirugia = models.CharField(max_length=35, choices=peso_cirugia, default=crm)
-    abordaje = models.CharField(max_length=35, choices=abordaje)
-    descripcion = models.CharField( max_length=150)
-    cirujano = models.OneToOneField(Cirujanos, on_delete=models.CASCADE)
-    ayudante = models.OneToOneField(Ayudantes, on_delete=models.CASCADE)
-    antecedentes = models.OneToOneField(Antecedentes, on_delete=models.CASCADE)
-    cirugia = models.OneToOneField(Cirugia, on_delete=models.CASCADE)
-    complicaciones = models.OneToOneField(Complicaciones, on_delete=models.CASCADE)
-    ecodoppler = models.OneToOneField(Ecodoppler, on_delete=models.CASCADE)
-    viablilidad = models.OneToOneField(Viablilidad, on_delete=models.CASCADE)
-    laboratorio = models.OneToOneField(Laboratorio, on_delete=models.CASCADE)
-    alta = models.OneToOneField(Alta, on_delete=models.CASCADE)
-    seguimiento = models.OneToOneField(Seguimiento, on_delete=models.CASCADE)
-
-    class Meta:
-        verbose_name = 'Evento'
-        verbose_name_plural = 'Eventos'

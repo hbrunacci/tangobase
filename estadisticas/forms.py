@@ -2,8 +2,8 @@ from django import forms
 from .models import *
 
 
-class EventForm(forms.ModelForm):
+class CirugiaForm(forms.ModelForm):
 
     class Meta:
-        model = Evento
+        model = Cirugia
         exclude = ('created_date',)

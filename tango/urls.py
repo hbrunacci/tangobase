@@ -28,9 +28,9 @@ resultados_seguimiento_crud = resultados_seguimientoCRUD()
 estudio_crud = estudioCRUD()
 cirujanos_crud = cirujanosCRUD()
 ayudantes_crud = ayudantesCRUD()
-evento_crud = eventoCRUD()
-antecedentes_crud = antecedentesCRUD()
 cirugia_crud = cirugiaCRUD()
+antecedentes_crud = antecedentesCRUD()
+datos_cirugia_crud = datos_cirugiaCRUD()
 complicaciones_crud = complicacionesCRUD()
 ecodoppler_crud = ecodopplerCRUD()
 viablilidad_crud = viablilidadCRUD()
@@ -58,9 +58,9 @@ urlpatterns = [
     path('', include(estudio_crud.get_urls())),
     path('', include(cirujanos_crud.get_urls())),
     path('', include(ayudantes_crud.get_urls())),
-    path('', include(evento_crud.get_urls())),
-    path('', include(antecedentes_crud.get_urls())),
     path('', include(cirugia_crud.get_urls())),
+    path('', include(antecedentes_crud.get_urls())),
+    path('', include(datos_cirugia_crud.get_urls())),
     path('', include(complicaciones_crud.get_urls())),
     path('', include(ecodoppler_crud.get_urls())),
     path('', include(viablilidad_crud.get_urls())),

@@ -10,7 +10,7 @@ class Antecedentes_Admin(admin.ModelAdmin):
     pass
 
 
-class Cirugia_Admin(admin.ModelAdmin):
+class Datos_En_Cirugia_Admin(admin.ModelAdmin):
     pass
 
 
@@ -49,9 +49,9 @@ admin.site.register(Resultados_seguimiento)
 admin.site.register(Estudio)
 admin.site.register(Cirujanos)
 admin.site.register(Ayudantes)
-admin.site.register(Evento)
-admin.site.register(Antecedentes)
 admin.site.register(Cirugia)
+admin.site.register(Antecedentes)
+admin.site.register(Datos_En_Cirugia)
 admin.site.register(Complicaciones)
 admin.site.register(Ecodoppler)
 admin.site.register(Viablilidad)
